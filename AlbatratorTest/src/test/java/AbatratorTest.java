@@ -1,4 +1,3 @@
-import exceptions.AibAlikException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +8,7 @@ import java.lang.reflect.Method;
 public class AbatratorTest {
 
     @Test
-    public void test1() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, AibAlikException {
+    public void test1() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class personClass = Person.class;
         Constructor c = personClass.getDeclaredConstructor(String.class);
         c.setAccessible(true);
@@ -23,14 +22,14 @@ public class AbatratorTest {
         Method setProfessionMethod = personClass.getMethod("setProfession", String.class);
         setProfessionMethod.invoke(person, "CEO");
 
-        Albatrator.validate(person, new AibAlikException());
+        Albatrator.validate(person);
 
         Assertions.assertTrue(true);
 
     }
 
     @Test
-    public void test2() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, AibAlikException {
+    public void test2() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class personClass = Person.class;
         Constructor c = personClass.getDeclaredConstructor(String.class);
         c.setAccessible(true);
@@ -47,14 +46,14 @@ public class AbatratorTest {
 
         setProfessionMethod.invoke(person, "CEO");
 
-        Albatrator.validate(person, new AibAlikException());
+        Albatrator.validate(person);
 
         Assertions.assertTrue(true);
 
     }
 
     @Test
-    public void test3() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, AibAlikException {
+    public void test3() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class personClass = Person.class;
         Constructor c = personClass.getDeclaredConstructor(String.class);
         c.setAccessible(true);
@@ -71,7 +70,7 @@ public class AbatratorTest {
 
         setProfessionMethod.invoke(person, "CEO");
 
-        Albatrator.validate(person, new AibAlikException());
+        Albatrator.validate(person);
 
         Assertions.assertTrue(true);
 

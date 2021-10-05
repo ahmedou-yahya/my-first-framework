@@ -1,3 +1,4 @@
+import exceptions.AibAlikException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +9,7 @@ import java.lang.reflect.Method;
 public class AbatratorTest {
 
     @Test
-    public void test1() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public void test1() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, AibAlikException {
         Class personClass = Person.class;
         Constructor c = personClass.getDeclaredConstructor(String.class);
         c.setAccessible(true);
@@ -29,7 +30,7 @@ public class AbatratorTest {
     }
 
     @Test
-    public void test2() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public void test2() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, AibAlikException {
         Class personClass = Person.class;
         Constructor c = personClass.getDeclaredConstructor(String.class);
         c.setAccessible(true);
@@ -53,7 +54,7 @@ public class AbatratorTest {
     }
 
     @Test
-    public void test3() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public void test3() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, AibAlikException {
         Class personClass = Person.class;
         Constructor c = personClass.getDeclaredConstructor(String.class);
         c.setAccessible(true);
